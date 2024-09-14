@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "BYekan";
+    src: url("../app/fonts/Vazir-N.ttf");
+}
+
+@layer utilities {
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+}
+
+@layer components {
+    .dropdown:hover .dropdown-content {
+        display: block;
+        background-color: white;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+    }
+
+    .dropdownn:hover .dropdown-contentt {
+        display: block;
+        background-color: #e6f9fd;
+        border-bottom-right-radius: 5%;
+        z-index: -1;
+    }
+
+    .dropdownn:hover .dropdown-contenttt {
+        /* width: calc(100% - 250px); */
+        padding-right: 260px;
+        display: grid;
+        z-index: -2;
+    }
+
+    /* #blur:hover ~ *:not(#navbarr) {
+        filter: blur(5px);
+    } */
+
+    /* #navbarr #blur:hover ~ *:not(#navbarr) {
+        filter: blur(5px);
+    }
+     */
+    /* #navbarr #blur:hover ~* {
+        filter: blur(5px);
+    } */
+
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-contentt {
+        display: none;
+    }
+
+    .dropdown-contenttt {
+        display: none;
+    }
+
+    /* Base styles for the radio input */
+    input[type="radio"] {
+        /* Hide the default radio button */
+        display: none;
+    }
+
+    /* Style the custom radio button */
+    input[type="radio"]+label::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 3px solid #dbf7e9;
+        /* Customize the border color */
+        border-radius: 10%;
+        margin-right: 8px;
+        margin-left: 10px;
+        position: relative;
+        top: 5px;
+    }
+
+    /* Style the custom radio button when selected */
+    input[type="radio"]:checked+label::before {
+        background-color: #4b987f;
+        /* Customize the fill color */
+    }
+}
